@@ -232,9 +232,7 @@ public class $1strings {
 		 String escapeStr = "Hello,\nWorld!\tThis is a tabbed line.\nHe said, \"Java is fun!\"";
 		 System.out.println("String with Escape Sequences:\n" + escapeStr);
 		 
-		 // Raw string literals (Java 21+)
-		 String rawStr = String.raw`C:\Users\JohnDoe\Documents\JavaProjects`;
-		 System.out.println("Raw String Literal:\n" + rawStr);
+
 		 	
 		 
 	

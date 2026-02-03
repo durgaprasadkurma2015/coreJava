@@ -113,6 +113,7 @@ public class oops {
 				System.out.println("Sum of two integers: " + mathOps.add(5, 10));
 				System.out.println("Sum of three integers: " + mathOps.add(5, 10, 15));
 				System.out.println("Sum of two doubles: " + mathOps.add(5.5, 10.5));
+			
 				
 				
 	}
