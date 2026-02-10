@@ -249,6 +249,7 @@ public class $2Synchronization {
 				e.printStackTrace();
 			}
 			volatileExample.setFlag();
+			// End of main method
 		
 
 	}

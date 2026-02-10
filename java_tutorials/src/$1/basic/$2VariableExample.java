@@ -3,6 +3,7 @@ package $1.basic;
 public class $2VariableExample {
     // Class variable
     static int classVar = 10;
+    
 
     // Instance variable
     int instanceVar;

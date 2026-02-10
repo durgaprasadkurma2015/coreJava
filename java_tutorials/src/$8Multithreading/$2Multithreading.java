@@ -139,6 +139,47 @@ public class $2Multithreading {
 				thread6.start();
 				
 				// Thread synchronization in java:
+				// 1. Synchronized methods: Methods that are marked with the synchronized keyword to ensure that only one thread can access them at a time.
+				// 2. Synchronized blocks: Blocks of code that are marked with the synchronized keyword to ensure that only one thread can access them at a time.
+				// 3. Locks: Using the Lock interface to create locks for synchronizing access to shared resources.
+				// 4. Semaphores: Using the Semaphore class to control access to a shared resource by multiple threads.
+				// Example of using locks for synchronization
+				class LockExample {
+					private int count = 0;
+					private final Object lock = new Object();
+					
+					public void increment() {
+						synchronized (lock) {
+							count++;
+						}
+					}
+					
+					public int getCount() {
+						return count;
+					}
+				}
+				LockExample lockCounter = new LockExample();
+				Thread thread7 = new Thread(() -> {
+					for (int i = 0; i < 1000; i++) {
+						lockCounter.increment();
+					}
+				});
+				Thread thread8 = new Thread(() -> {
+					for (int i = 0; i < 1000; i++) {
+						lockCounter.increment();
+					}
+				});
+				thread7.start();
+				thread8.start();
+				try {
+					thread7.join();
+					thread8.join();
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				System.out.println("Final count using locks: " + lockCounter.getCount());
+				// End of main method
+				
 				
 			
 			

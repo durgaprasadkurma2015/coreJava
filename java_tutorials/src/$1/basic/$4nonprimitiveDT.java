@@ -3,17 +3,22 @@ package $1.basic;
 
 public class $4nonprimitiveDT {
 	public static void main(String[] args) {
+		
 		// interface
 		 Dog dog = new Dog();
 	        dog.sound();
+	        
 		// enum
 	        Day day = Day.MONDAY;
 	       System.out.println("Day: " + day);
+	       
 	       // annotation
 	       System.out.println("Annotation Example"); 
+	       
 	        //  String
 		  String stringValue = "Hello, Java!";
 	        System.out.println("String Value: " + stringValue);
+	        
 	        // array
 	        int[] arrayValue = {1, 2, 3, 4, 5};
 	        System.out.print("Array Values: ");
@@ -21,6 +26,7 @@ public class $4nonprimitiveDT {
 	            System.out.print(i + " ");
 	        }
 	        System.out.println();
+	        
 	        // class
 	        Person person = new Person("John", 30);
 	        System.out.println("Person Name: " + person.getName());
@@ -50,6 +56,7 @@ public class $4nonprimitiveDT {
 	}
 
 }
+
 	// interface
 	interface Animal {
 	    void sound();
