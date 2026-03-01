@@ -294,7 +294,22 @@ public class $1FileHandling {
 						System.out.println("The file with special characters has been deleted.");
 					}
 			}
-		
+		// Creating a file with a specific path and writing to it
+				try {
+			File specificFileToWrite = new File("C:\\Users\\Public\\specific_file_to_write.txt");
+			if (specificFileToWrite.createNewFile()) {
+				System.out.println("Specific file to write created: " + specificFileToWrite.getAbsolutePath());
+			} else {
+				System.out.println("Specific file to write already exists.");
+			}
+			FileWriter writer = new FileWriter(specificFileToWrite);
+			writer.write("This is a specific file created for writing.");
+			writer.close();
+			System.out.println("Successfully wrote to the specific file.");
+		} catch (IOException e) {
+			System.out.println("An error occurred while creating/writing to the specific file.");
+			e.printStackTrace();
+		}
 
 		
 		
